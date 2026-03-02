@@ -1,8 +1,21 @@
 # ReadCube Papers Skill
 
-An unofficial API client for [ReadCube Papers](https://www.papersapp.com/) that retrieves paper metadata, annotations, and references from your personal library.
+An **agent skill** for AI coding assistants (e.g., [Antigravity](https://blog.google/technology/google-deepmind/gemini-agent-antigravity/), [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)) that provides access to [ReadCube Papers](https://www.papersapp.com/) libraries via an unofficial API.
+
+This skill enables AI agents to retrieve paper metadata, annotations, and references from a user's ReadCube Papers library during conversations — useful for literature reviews, citation management, and manuscript preparation.
 
 > **⚠️ Disclaimer**: This skill uses an unofficial API reverse-engineered from the ReadCube Papers web application. It is not affiliated with or endorsed by ReadCube/Digital Science. The API may change without notice, potentially breaking this tool.
+
+## What is an Agent Skill?
+
+Agent skills are modular packages that extend the capabilities of AI coding agents. When installed in the `~/.agents/skills/` directory, the agent automatically detects and uses the skill based on user requests. For example, asking _"search my ReadCube library for papers about vacuole dynamics"_ will trigger this skill.
+
+### Installation
+
+```bash
+# Clone into the skills directory
+git clone https://github.com/<your-username>/readcube-papers-skill.git ~/.agents/skills/readcube-papers
+```
 
 ## Features
 
