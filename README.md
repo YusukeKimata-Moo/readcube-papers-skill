@@ -1,6 +1,6 @@
 # ReadCube Papers Skill
 
-An **agent skill** for AI coding assistants (e.g., [Antigravity](https://blog.google/technology/google-deepmind/gemini-agent-antigravity/), [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)) that provides access to [ReadCube Papers](https://www.papersapp.com/) libraries via an unofficial API.
+An **agent skill** for AI coding assistants (e.g., [Antigravity](https://antigravity.google/), [Claude Code](https://claude.com/product/claude-code)) that provides access to [ReadCube Papers](https://www.papersapp.com/) libraries via an unofficial API.
 
 This skill enables AI agents to retrieve paper metadata, annotations, and references from a user's ReadCube Papers library during conversations — useful for literature reviews, citation management, and manuscript preparation.
 
@@ -140,4 +140,3 @@ API endpoint information was referenced from the [Joplin ReadCube Papers plugin]
 ## License
 
 MIT
-
