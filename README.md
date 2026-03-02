@@ -8,7 +8,7 @@ This skill enables AI agents to retrieve paper metadata, annotations, and refere
 
 ## What is an Agent Skill?
 
-Agent skills are modular packages that extend the capabilities of AI coding agents. When installed in the `~/.agents/skills/` directory, the agent automatically detects and uses the skill based on user requests. For example, asking _"search my ReadCube library for papers about vacuole dynamics"_ will trigger this skill.
+Agent skills are modular packages that extend the capabilities of AI coding agents. When installed in the `~/.agents/skills/` directory, the agent automatically detects and uses the skill based on user requests. For example, asking _"search my ReadCube library for papers about CRISPR"_ will trigger this skill.
 
 ### Installation
 
@@ -64,57 +64,45 @@ python scripts/readcube_papers.py login
 
 ## Usage
 
-### List Collections
+Once installed and environment variables are set, simply ask your AI agent in natural language. The skill is triggered automatically.
+
+### Example Prompts
+
+**Browsing your library:**
+
+- _"List all papers in my ReadCube library"_
+- _"Show my ReadCube collections"_
+
+**Searching papers:**
+
+- _"Search my ReadCube library for papers about CRISPR-Cas9"_
+- _"Find papers by Zhang in my library"_
+- _"Look up papers published in Nature in 2024 from my ReadCube"_
+- _"Search my library for papers related to single-cell RNA-seq"_
+
+**Retrieving details:**
+
+- _"Get the abstract and DOI of the paper about genome editing in my library"_
+- _"Show my annotations and highlights for that paper"_
+
+**Manuscript support:**
+
+- _"Find references in my ReadCube about protein localization for the Introduction section"_
+- _"List all papers tagged 'review' in my library"_
+
+### CLI Reference
+
+The agent calls the script internally, but you can also use it directly:
 
 ```bash
-python scripts/readcube_papers.py collections
-```
-
-### List All Papers
-
-```bash
-# JSON output (default)
-python scripts/readcube_papers.py list
-
-# Markdown output with abstracts, tags, and notes
-python scripts/readcube_papers.py --format markdown list --verbose
-```
-
-### Get Paper Details
-
-```bash
-python scripts/readcube_papers.py get <item_id>
-python scripts/readcube_papers.py --format markdown get <item_id>
-```
-
-### Get Annotations
-
-```bash
-python scripts/readcube_papers.py annotations <item_id>
-python scripts/readcube_papers.py --format markdown annotations <item_id>
-```
-
-### Search Papers
-
-```bash
-# Search all fields
-python scripts/readcube_papers.py search "vacuole"
-
-# Search specific field
-python scripts/readcube_papers.py search "Smith" --field authors
-python scripts/readcube_papers.py search "10.1073/pnas.1814160116" --field doi
-python scripts/readcube_papers.py search "2024" --field year
-
-# Markdown output with details
-python scripts/readcube_papers.py --format markdown search "zygote" --field title --verbose
-```
-
-### CLI Options
-
-You can also pass credentials directly instead of using environment variables:
-
-```bash
-python scripts/readcube_papers.py --email your@email.com --password yourpass list
+python scripts/readcube_papers.py login                          # Test login
+python scripts/readcube_papers.py collections                    # List collections
+python scripts/readcube_papers.py list                           # List all papers (JSON)
+python scripts/readcube_papers.py --format markdown list         # List all papers (Markdown)
+python scripts/readcube_papers.py search "apoptosis"             # Search all fields
+python scripts/readcube_papers.py search "Tanaka" --field authors # Search by author
+python scripts/readcube_papers.py get <item_id>                  # Get paper details
+python scripts/readcube_papers.py annotations <item_id>          # Get annotations
 ```
 
 ## Available Paper Fields
