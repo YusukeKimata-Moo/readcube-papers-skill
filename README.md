@@ -14,7 +14,7 @@ Agent skills are modular packages that extend the capabilities of AI coding agen
 
 ```bash
 # Clone into the skills directory
-git clone https://github.com/<your-username>/readcube-papers-skill.git ~/.agents/skills/readcube-papers
+git clone https://github.com/YusukeKimata-Moo/readcube-papers-skill.git ~/.agents/skills/readcube-papers
 ```
 
 ## Features
@@ -140,3 +140,4 @@ API endpoint information was referenced from the [Joplin ReadCube Papers plugin]
 ## License
 
 MIT
+
